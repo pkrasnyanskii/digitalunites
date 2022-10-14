@@ -118,7 +118,6 @@ replay_pid*
 ### Gradle ###
 .gradle
 **/build/
-!Task-1-1-1/src/**/build/
 /gradlew
 /gradlew.bat
 /gradle/
