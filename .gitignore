@@ -119,6 +119,9 @@ replay_pid*
 .gradle
 **/build/
 !Task-1-1-1/src/**/build/
+/gradlew
+/gradlew.bat
+/gradle/
 
 # Ignore Gradle GUI config
 gradle-app.setting
