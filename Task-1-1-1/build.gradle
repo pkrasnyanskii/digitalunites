@@ -18,10 +18,6 @@ dependencies {
 
 test {
     useJUnitPlatform()
-    finalizedBy jacocoTestReport
-    if (project.hasProperty('excludeTests')) {
-        exclude project.property('excludeTests')
-    }
 }
 /*
 jacoco {
@@ -39,7 +35,7 @@ jacocoTestReport {
     afterEvaluate {
         classDirectories.setFrom(files(classDirectories.files.collect {
             fileTree(dir: it, exclude: [
-                    "com.krasnyanskii.HeapSort.class",
+                    "**/Main.class",
                     //"<package>.Main.class" Указывайте полное имея пакета с точками
             ])
         }))
