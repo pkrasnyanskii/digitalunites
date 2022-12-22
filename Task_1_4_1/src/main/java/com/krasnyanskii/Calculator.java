@@ -20,7 +20,6 @@ class Calculator {
          * Constructs an operation which is calculated using the given function.
          * @param arity the number of arguments of the operation
          * @param func the function calculating the value of the operation for given parameters.
-         * The parameters are passed as a <code>double[]</code>.
          */
         public Op(int arity, Function<double[], Double> func) {
             this.arity = arity;
@@ -66,7 +65,6 @@ class Calculator {
      * @param opName the name of the operation
      * @param arity the number of arguments of the operation
      * @param func the function calculating the value of the operation for given parameters.
-     * The parameters are passed as a <code>double[]</code>.
      */
     public void addOp(String opName, int arity, Function<double[], Double> func) {
         operations.put(opName, new Op(arity, func));
