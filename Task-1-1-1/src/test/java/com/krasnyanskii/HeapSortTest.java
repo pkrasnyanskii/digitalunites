@@ -35,5 +35,4 @@ public class HeapSortTest {
 
         assertArrayEquals(expected, actual);
     }
-
 }
