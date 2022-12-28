@@ -1,4 +1,4 @@
-package com.krasnyanskii;
+package java.com.krasnyanskii;
 
 import java.util.ArrayDeque;
 import java.util.Arrays;
