@@ -1,5 +1,3 @@
-package java.com.krasnyanskii;
-
 import java.time.LocalDate;
 
 public class Grade {
@@ -119,6 +117,4 @@ public class Grade {
     public void setTeacher(Person teacher) {
         this.teacher = teacher;
     }
-
-
 }

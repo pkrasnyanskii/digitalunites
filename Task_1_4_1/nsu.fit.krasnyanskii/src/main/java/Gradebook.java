@@ -1,5 +1,3 @@
-package java.com.krasnyanskii;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -7,7 +5,7 @@ import java.util.Map;
 
 /**
  * Gradebook is a digital grade book class.
- * It allows you control grades of students. I treat it like database.
+ * It allows you control grades of students.
  */
 public class Gradebook {
 
@@ -65,6 +63,14 @@ public class Gradebook {
     public void setStudent(Person student) {
         this.student = student;
     }
+
+    /**
+     * Adds grade in selected semester and subject
+     *
+     * @param semester semester number (0-8)
+     * @param subject  string name of subject
+     * @param grade    grade to add
+     */
     public void addGrade(int semester, String subject, Grade grade) {
         semesterGrades.get(semester - 1).put(subject, grade);
     }

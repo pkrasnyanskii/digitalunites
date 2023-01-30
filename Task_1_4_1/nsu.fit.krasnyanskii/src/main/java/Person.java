@@ -1,8 +1,10 @@
-package java.com.krasnyanskii;
-
 public class Person {
     /**
      * Initialises Person object
+     *
+     * @param surname    surname e.g. "Krasnyanskii"
+     * @param name       name e.g. "Peter"
+     * @param patronymic patronymic e.g. "Mikhailovich"
      */
     public Person(String surname, String name, String patronymic) {
         this.setSurname(surname);
@@ -70,6 +72,7 @@ public class Person {
 
     /**
      * Returns full name of person as string concat of name, surname and patronymic
+     * e.g "Krasnyanskii Peter Mikhailovich"
      *
      * @return full name of person as one string
      */
