@@ -1,6 +1,12 @@
 package com.krasnyanskii;
 
 public class HeapSort {
+    /** Heapify is a method to create max heap from a given array
+     *
+     * @param arr Array to heapify
+     * @param n Array length
+     * @param i Index of middle element in array
+     */
     public static void heapify(int[] arr, int n, int i) {
 
         int large = i;
@@ -19,6 +25,10 @@ public class HeapSort {
         }
     }
 
+    /** Sort is a method which sorts given array by using heapify method
+     *
+     * @param arr Array
+     */
     public static void sort(int[] arr) {
 
         int n = arr.length;
