@@ -2,12 +2,20 @@ package nsu.fit.krasnyanskii;
 
 import java.util.*;
 
+/**
+ * Classic tree data structure
+ * @param <T> class of values
+ */
 public class Tree<T> implements Collection<T> {
 
     private final Node<T> root;
     private int count;
     private int countModified;
 
+    /**
+     * Class for tree's node
+     * @param <T> class of values
+     */
     private static class Node<T> {
         private T value;
         private ArrayList<Node<T>> children;
@@ -20,6 +28,9 @@ public class Tree<T> implements Collection<T> {
         }
     }
 
+    /**
+     * Tree with root
+     */
     public Tree(){
         root = new Node<>();
         count = 0;
@@ -40,9 +51,6 @@ public class Tree<T> implements Collection<T> {
         return stream().anyMatch(elem -> elem.equals(obj));
     }
 
-    /**
-     * @return
-     */
     @Override
     public Iterator<T> iterator() {
         return null;
