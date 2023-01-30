@@ -28,13 +28,4 @@ public class StackTest {
         int answer = stack.count();
         assertEquals(3, answer);
     }
-
-//    @Test
-//    void testForWrongInputData(){
-//        assertEquals(0, stack.count());
-//        assertThrows("Stack empty",
-//                () -> {
-//                    stack.pop();
-//                });
-//    }
 }

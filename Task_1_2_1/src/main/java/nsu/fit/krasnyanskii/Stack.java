@@ -2,6 +2,10 @@ package nsu.fit.krasnyanskii;
 
 import nsu.fit.krasnyanskii.*;
 
+/** Stack class implements stack data structure
+ *
+ * @param <T> Array of given data type
+ */
 public class Stack<T extends Object> {
     private T[] arr;
     private int top;
