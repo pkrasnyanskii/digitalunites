@@ -113,7 +113,7 @@ public class Gradebook {
     }
 
     /**
-     * Returns current semester number based on grades. Can fall cause Exception if previous semesters grades missing.
+     * Returns current semester number based on grades.
      *
      * @return current semester number (0-8)
      */
