@@ -11,6 +11,9 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Task-1-1-1" />
             <option value="$PROJECT_DIR$/Task_1_3_1" />
+            <option value="$PROJECT_DIR$/Task_1_3_1/src" />
+            <option value="$PROJECT_DIR$/Task_1_3_1/src/main" />
+            <option value="$PROJECT_DIR$/Task_1_3_1/src/main/test" />
           </set>
         </option>
       </GradleProjectSettings>
