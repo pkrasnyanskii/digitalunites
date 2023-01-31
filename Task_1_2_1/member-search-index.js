@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"nsu.fit.krasnyanskii","c":"Stack","l":"count()"},{"p":"nsu.fit.krasnyanskii","c":"Stack","l":"pop()"},{"p":"nsu.fit.krasnyanskii","c":"Stack","l":"popStack(int)"},{"p":"nsu.fit.krasnyanskii","c":"Stack","l":"push(T)"},{"p":"nsu.fit.krasnyanskii","c":"Stack","l":"pushStack(T[])"}]
