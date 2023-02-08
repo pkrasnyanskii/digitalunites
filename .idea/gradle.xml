@@ -9,10 +9,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/Task-1-1-1" />
             <option value="$PROJECT_DIR$/Task-1-5-1" />
-            <option value="$PROJECT_DIR$/Task-1-5-1/com.krasnyanskii" />
-            <option value="$PROJECT_DIR$/Task-1-5-1/nsu.fit.krasnyanskii" />
           </set>
         </option>
       </GradleProjectSettings>

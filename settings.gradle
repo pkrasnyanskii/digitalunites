@@ -8,12 +8,5 @@
  */
 
 rootProject.name = 'oop'
-include 'Task-1-1-1'
 include 'Task-1-5-1'
-include 'Task-1-5-1:nsu.fit.krasnyanskii'
-findProject(':Task-1-5-1:nsu.fit.krasnyanskii')?.name = 'nsu.fit.krasnyanskii'
-include 'Task-1-5-1:nsu.fit.krasnyanskii'
-findProject(':Task-1-5-1:nsu.fit.krasnyanskii')?.name = 'nsu.fit.krasnyanskii'
-include 'Task-1-5-1:com.krasnyanskii'
-findProject(':Task-1-5-1:com.krasnyanskii')?.name = 'com.krasnyanskii'
 
