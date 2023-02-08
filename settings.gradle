@@ -8,5 +8,5 @@
  */
 
 rootProject.name = 'oop'
-include 'Task-1-5-1'
+include 'Task_1_5_1'
 
