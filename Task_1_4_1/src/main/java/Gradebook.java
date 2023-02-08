@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * Gradebook is a digital grade book class.
@@ -95,7 +96,7 @@ public class Gradebook {
     public ArrayList<Integer> getJustGrades(int semester) {
         return new ArrayList<>(
                 semesterGrades.get(semester - 1).values()
-                        .stream().map(Grade::getGrade).toList());
+                        .stream().map(Grade::getGrade).collect(Collectors.toList()));
     }
 
     /**
