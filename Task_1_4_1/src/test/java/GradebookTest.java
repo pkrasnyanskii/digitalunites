@@ -11,13 +11,21 @@ class GradebookTest {
     void init() {
         myBook = new Gradebook(
                 "Краснянский",
-                "Пётр",
+                "Пётрр",
                 "Михайлович");
         addGrade_test();
     }
 
     @Test
     void person_toString_test() {
+        Assertions.assertEquals(
+                "Краснянский Пётрр Михайлович",
+                myBook.getStudent().toString());
+    }
+
+    @Test
+    void person_setName_test() {
+        myBook.getStudent().setName("Пётр");
         Assertions.assertEquals(
                 "Краснянский Пётр Михайлович",
                 myBook.getStudent().toString());
