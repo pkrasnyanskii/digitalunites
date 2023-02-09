@@ -5,7 +5,7 @@ public class HeapSort {
      *
      * @param arr Array to heapify
      * @param n Array length
-     * @param i Index of middle element in array
+     * @param i Index of root
      */
     public static void heapify(int[] arr, int n, int i) {
 
