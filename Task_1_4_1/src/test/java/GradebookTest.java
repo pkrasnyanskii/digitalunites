@@ -109,6 +109,8 @@ class GradebookTest {
         Assertions.assertEquals(4, myBook.getGrade(1, "Введение в дискретную математику и математическую логику").getGrade());
         Assertions.assertEquals(LocalDate.of(2022, 01, 18), myBook.getGrade(1, "Введение в дискретную математику и математическую логику").getDate());
         Assertions.assertEquals(new Person("Власов", "Дмитрий", "Юрьевич").getName(), myBook.getGrade(1, "Введение в дискретную математику и математическую логику").getTeacher().getName());
+        Assertions.assertEquals(new Person("Власов", "Дмитрий", "Юрьевич").getSurname(), myBook.getGrade(1, "Введение в дискретную математику и математическую логику").getTeacher().getSurname());
+
     }
 
     @Test
