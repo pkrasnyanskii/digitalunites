@@ -32,6 +32,11 @@ class GradebookTest {
     }
 
     @Test
+    void person_getPatronymic_test(){
+        Assertions.assertEquals("Михайлович", myBook.getStudent().getPatronymic().toString());
+    }
+
+    @Test
     void avgGrades_test() {
         Assertions.assertEquals(
                 (5 + 3 + 4 + 4) / 4d,
