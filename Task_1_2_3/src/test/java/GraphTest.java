@@ -284,7 +284,7 @@ public class GraphTest {
         int[][] weights;
 
         try (InputStream input = getClass()
-                .getClassLoader().getResourceAsStream("stringGraph.txt")) {
+                .getClassLoader().getResourceAsStream("testGraph.txt")) {
             assert input != null;
             Scanner sc = new Scanner(input);
             vertexCount = sc.nextInt();
