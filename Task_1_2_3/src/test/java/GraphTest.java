@@ -8,8 +8,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 public class GraphTest {
 
     @Test
@@ -214,6 +212,70 @@ public class GraphTest {
 
         Assertions.assertEquals(expected, actual);
     }
+    @Test
+    void listOfAdjacencyTest() {
+        // actual
+        int vertexCount;
+        String[] vertexArray;
+        List<String>[] vertexList;
+        List<Integer>[] weights;
+
+        try (InputStream input =
+                     getClass().getClassLoader().getResourceAsStream("adjacencyList.txt")) {
+            assert input != null;
+            Scanner sc = new Scanner(input);
+
+            vertexCount = sc.nextInt();
+            vertexArray = new String[vertexCount];
+            vertexList = new List[vertexCount];
+            weights = new List[vertexCount];
+
+            for (int i = 0; i < vertexCount; i++) {
+                vertexList[i] = new ArrayList<>();
+                weights[i] = new ArrayList<>();
+            }
+
+            for (int i = 0; i < vertexCount; i++) {
+                vertexArray[i] = sc.next();
+            }
+
+            for (int i = 0; i < vertexCount; i++) {
+                int adjs = sc.nextInt();
+
+                for (int j = 0; j < adjs; j++) {
+                    vertexList[i].add(sc.next());
+                    weights[i].add(sc.nextInt());
+                }
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        //expected
+        Vertex<String> a = new Vertex<>("a");
+        Vertex<String> b = new Vertex<>("b");
+        Vertex<String> c = new Vertex<>("c");
+        Vertex<String> d = new Vertex<>("d");
+
+        Graph<String> expected = new Graph<>();
+
+        expected.addVertex("a");
+        expected.addVertex("b");
+        expected.addVertex("c");
+        expected.addVertex("d");
+
+        expected.addEdge(a, b, 4);
+        expected.addEdge(a, c, 2);
+        expected.addEdge(a, d, 5);
+        expected.addEdge(b, d, 1);
+        expected.addEdge(c, b, 1);
+
+        Graph<String> actual = new Graph<>(vertexArray, vertexList, weights);
+
+        //asserts
+        Assertions.assertEquals(expected, actual);
+    }
+
 
     @Test
     void stringGraphTest() {
