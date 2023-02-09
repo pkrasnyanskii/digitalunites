@@ -64,7 +64,6 @@ public class RabinKarp {
 
             while (true) {
 
-                // I need one more chance
                 if ((nextChar = reader.read()) == -1) {
                     count++;
                     if (count == 2) {
@@ -76,8 +75,6 @@ public class RabinKarp {
                 end++;
 
                 if (end == patLen + 1) {
-
-                    // Only once
                     if (t == -1) {
                         t = 0;
                         for (i = 0; i < patLen; i++) {
@@ -85,9 +82,7 @@ public class RabinKarp {
                         }
                     }
 
-                    // If pattern hash is equal to text hash
                     if (p == t) {
-                        // Check for characters one by one
                         for (j = 0; j < patLen; j++) {
                             if (text.charAt(j) != pattern.charAt(j)) {
                                 break;
