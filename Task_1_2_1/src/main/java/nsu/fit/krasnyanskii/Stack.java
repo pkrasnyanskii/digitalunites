@@ -26,11 +26,11 @@ public class Stack<T> {
     /**
      * Pushes an element to the stack
      * @param x is a value of element
+     * @throws StackOverflowError when stack is full
      */
-    public void push(T x){
+    public void push(T x) throws StackOverflowError {
         if (top == capacity - 1) {
-            System.out.println("Stack OverFlow");
-            System.exit(1);
+            throw new StackOverflowError("Stack overflow occurred");
         }
         arr[++top] = x;
     }
@@ -38,13 +38,13 @@ public class Stack<T> {
     /**
      * Pushes an array of elements to the stack
      * @param list is an array of elements
+     * @throws StackOverflowError when stack is full
      */
-    public void pushStack(T[] list) {
+    public void pushStack(T[] list) throws StackOverflowError {
         if (list.length + count() > capacity) {
-            System.out.println("Stack OverFlow");
-            System.exit(1);
+            throw new StackOverflowError("Stack overflow occurred");
         }
-        for(int i=0; i < list.length; i++){
+        for (int i = 0; i < list.length; i++) {
             arr[++top] = list[i];
         }
     }
@@ -52,11 +52,11 @@ public class Stack<T> {
     /**
      * Pops top element from the stack and returns new top element value
      * @return - value of the element
+     * @throws IndexOutOfBoundsException when stack is empty
      */
-    public T pop() {
+    public T pop() throws IndexOutOfBoundsException {
         if (top == -1) {
-            System.out.println("Stack empty");
-            System.exit(1);
+            throw new IndexOutOfBoundsException("Stack underflow occurred");
         }
         return arr[top--];
     }
@@ -65,12 +65,12 @@ public class Stack<T> {
      * Pops an array of elements from the stack with size n
      * @param n - size of array
      * @return - returns current top element value
+     * @throws IndexOutOfBoundsException when stack does not contain enough elements to pop
      */
-    public T popStack(int n) {
+    public T popStack(int n) throws IndexOutOfBoundsException {
         if (count() - n < 0) {
-            System.out.println("Number of elements to pop is greater or equals to number of stack values");
-            System.exit(1);
+            throw new IndexOutOfBoundsException("Stack does not contain enough elements to pop");
         }
-        return arr[top-n];
+        return arr[top - n];
     }
 }

@@ -28,4 +28,29 @@ public class StackTest {
         int answer = stack.count();
         assertEquals(3, answer);
     }
+
+    @Test
+    public void testPushStackOverflow() {
+        Stack<Integer> stack = new Stack<>(3);
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+
+        assertThrows(StackOverflowError.class, () -> stack.push(4));
+    }
+
+    @Test
+    public void testPopEmptyStack() {
+        Stack<Integer> stack = new Stack<>(3);
+
+        assertThrows(IndexOutOfBoundsException.class, stack::pop);
+    }
+
+    @Test
+    public void testPopStackUnderflow() {
+        Stack<Integer> stack = new Stack<>(3);
+        stack.push(1);
+
+        assertThrows(IndexOutOfBoundsException.class, () -> stack.popStack(2));
+    }
 }
