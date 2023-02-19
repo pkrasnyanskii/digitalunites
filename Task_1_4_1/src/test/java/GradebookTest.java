@@ -124,18 +124,13 @@ class GradebookTest {
         Assertions.assertFalse(
                 myBook.isIncreasedScholarshipReady());
     }
-
     @Test
     void isRedDiplomaReady_test() {
-        myBook.setQualifyingWorkGrade(5);
-        Assertions.assertFalse(
-                myBook.isRedDiplomaReady());
+        DiplomaGrade qualifyingWorkGrade = new DiplomaGrade(5, "Квалификационная работа по теме учёба в НГУ");
+        myBook.setDiplomaGrade(qualifyingWorkGrade);
 
-        addGrade_test1();
-        Assertions.assertFalse(
-                myBook.isRedDiplomaReady());
+        Assertions.assertFalse(myBook.isRedDiplomaReady());
     }
-
     @Test
     void addGrade_test1() {
         myBook.addGrade(1, "Декларативное программирование", new Grade(3));

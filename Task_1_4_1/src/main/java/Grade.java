@@ -38,10 +38,12 @@ public class Grade {
     private int grade;
     private LocalDate date;
 
+    public Grade() {}
+
     /**
      * Attestation form: exam, credit, differential credit
      */
-    public enum FormType {diffCredit, exam, credit}
+    public enum FormType {diffCredit, exam, credit, qualifyingWork}
 
     private FormType form;
     private Person teacher;

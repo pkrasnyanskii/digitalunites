@@ -13,7 +13,9 @@ public class Gradebook {
     private Person student;
     private final int MAX_SEMESTER = 8;
     private final List<Map<String, Grade>> semesterGrades = new ArrayList<>(MAX_SEMESTER);
-    private int qualifyingWorkGrade;
+
+    private DiplomaGrade diplomaGrade;
+
 
     /**
      * Initialises Gradebook with student's full name
@@ -29,22 +31,12 @@ public class Gradebook {
         }
     }
 
-    /**
-     * Sets qualifying work grade
-     *
-     * @param qualifyingWorkGrade qualifying work grade to set
-     */
-    public void setQualifyingWorkGrade(int qualifyingWorkGrade) {
-        this.qualifyingWorkGrade = qualifyingWorkGrade;
+    public void setDiplomaGrade(DiplomaGrade diplomaGrade) {
+        this.diplomaGrade = diplomaGrade;
     }
 
-    /**
-     * Returns qualifying work grade
-     *
-     * @return qualifying work grade
-     */
-    public int getQualifyingWorkGrade() {
-        return qualifyingWorkGrade;
+    public DiplomaGrade getDiplomaGrade() {
+        return diplomaGrade;
     }
 
     /**
@@ -66,10 +58,10 @@ public class Gradebook {
     }
 
     /**
-     * Adds grade in selected semester and subject
+     * Adds grade in selected semester and subject, or for the qualifying work
      *
-     * @param semester semester number (0-8)
-     * @param subject  string name of subject
+     * @param semester semester number (0-8) or -1 for qualifying work
+     * @param subject  string name of subject or null for qualifying work
      * @param grade    grade to add
      */
     public void addGrade(int semester, String subject, Grade grade) {
@@ -77,10 +69,10 @@ public class Gradebook {
     }
 
     /**
-     * Get grade in selected semester and subject
+     * Get grade in selected semester and subject, or for the qualifying work
      *
-     * @param semester semester number (0-8)
-     * @param subject  string name of subject
+     * @param semester semester number (0-8) or -1 for qualifying work
+     * @param subject  string name of subject or null for qualifying work
      * @return Grade object
      */
     public Grade getGrade(int semester, String subject) {
@@ -163,6 +155,6 @@ public class Gradebook {
             return false;
         }
 
-        return qualifyingWorkGrade >= 5;
+        return diplomaGrade.getGrade() >= 5;
     }
 }
