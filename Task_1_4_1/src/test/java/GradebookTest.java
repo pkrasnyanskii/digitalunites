@@ -159,4 +159,27 @@ class GradebookTest {
         );
     }
 
+    @Test
+    void testSetThesisTopic() {
+        DiplomaGrade diplomaGrade = new DiplomaGrade(5, "Some topic");
+        String newTopic = "New topic";
+        diplomaGrade.setThesisTopic(newTopic);
+        Assertions.assertEquals(newTopic, diplomaGrade.getThesisTopic());
+    }
+
+    @Test
+    void testConstructorAndGettersOfDiplomaGrade() {
+        int grade = 5;
+        LocalDate date = LocalDate.of(2022, 1, 1);
+        Person teacher = new Person("Иванов", "Иван", "Иванович");
+        String thesisTopic = "Some topic";
+        DiplomaGrade diplomaGrade = new DiplomaGrade(grade, date, teacher, thesisTopic);
+
+        Assertions.assertEquals(grade, diplomaGrade.getGrade());
+        Assertions.assertEquals(date, diplomaGrade.getDate());
+        Assertions.assertEquals(Grade.FormType.qualifyingWork, diplomaGrade.getFormType());
+        Assertions.assertEquals(teacher, diplomaGrade.getTeacher());
+        Assertions.assertEquals(thesisTopic, diplomaGrade.getThesisTopic());
+    }
+
 }

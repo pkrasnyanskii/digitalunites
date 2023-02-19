@@ -52,4 +52,8 @@ public class DiplomaGrade extends Grade {
     public void setThesisTopic(String thesisTopic) {
         this.thesisTopic = thesisTopic;
     }
+
+    public FormType getFormType(){
+        return FormType.qualifyingWork;
+    }
 }
