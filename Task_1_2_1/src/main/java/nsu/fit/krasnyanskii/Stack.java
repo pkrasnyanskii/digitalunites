@@ -17,7 +17,7 @@ public class Stack<T> {
 
     /**
      * Returns current stack size
-     * @return is a stack size
+     * @return - stack size
      */
     public int count() {
         return top + 1;
