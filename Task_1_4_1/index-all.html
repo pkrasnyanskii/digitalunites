@@ -91,14 +91,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </nav>
 </header>
 <main role="main">
-<div class="contentContainer"><a href="#I:A">A</a>&nbsp;<a href="#I:C">C</a>&nbsp;<a href="#I:D">D</a>&nbsp;<a href="#I:E">E</a>&nbsp;<a href="#I:G">G</a>&nbsp;<a href="#I:I">I</a>&nbsp;<a href="#I:P">P</a>&nbsp;<a href="#I:S">S</a>&nbsp;<a href="#I:T">T</a>&nbsp;<a href="#I:V">V</a>&nbsp;<br><a href="allclasses-index.html">All&nbsp;Classes</a>&nbsp;<a href="allpackages-index.html">All&nbsp;Packages</a><a id="I:A">
+<div class="contentContainer"><a href="#I:A">A</a>&nbsp;<a href="#I:C">C</a>&nbsp;<a href="#I:D">D</a>&nbsp;<a href="#I:E">E</a>&nbsp;<a href="#I:G">G</a>&nbsp;<a href="#I:I">I</a>&nbsp;<a href="#I:P">P</a>&nbsp;<a href="#I:Q">Q</a>&nbsp;<a href="#I:S">S</a>&nbsp;<a href="#I:T">T</a>&nbsp;<a href="#I:V">V</a>&nbsp;<br><a href="allclasses-index.html">All&nbsp;Classes</a>&nbsp;<a href="allpackages-index.html">All&nbsp;Packages</a><a id="I:A">
 <!--   -->
 </a>
 <h2 class="title">A</h2>
 <dl>
 <dt><span class="memberNameLink"><a href="Gradebook.html#addGrade(int,java.lang.String,Grade)">addGrade(int, String, Grade)</a></span> - Method in class <a href="Gradebook.html" title="class in &lt;Unnamed&gt;">Gradebook</a></dt>
 <dd>
-<div class="block">Adds grade in selected semester and subject</div>
+<div class="block">Adds grade in selected semester and subject, or for the qualifying work</div>
 </dd>
 <dt><span class="memberNameLink"><a href="Gradebook.html#avgGradesAll()">avgGradesAll()</a></span> - Method in class <a href="Gradebook.html" title="class in &lt;Unnamed&gt;">Gradebook</a></dt>
 <dd>
@@ -124,6 +124,12 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dl>
 <dt><span class="memberNameLink"><a href="Grade.FormType.html#diffCredit">diffCredit</a></span> - <a href="Grade.FormType.html" title="enum in &lt;Unnamed&gt;">Grade.FormType</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="DiplomaGrade.html" title="class in &lt;Unnamed&gt;"><span class="typeNameLink">DiplomaGrade</span></a> - Class in <a href="package-summary.html">&lt;Unnamed&gt;</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="DiplomaGrade.html#%3Cinit%3E(int,java.lang.String)">DiplomaGrade(int, String)</a></span> - Constructor for class <a href="DiplomaGrade.html" title="class in &lt;Unnamed&gt;">DiplomaGrade</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="DiplomaGrade.html#%3Cinit%3E(int,java.time.LocalDate,Person,java.lang.String)">DiplomaGrade(int, LocalDate, Person, String)</a></span> - Constructor for class <a href="DiplomaGrade.html" title="class in &lt;Unnamed&gt;">DiplomaGrade</a></dt>
+<dd>&nbsp;</dd>
 </dl>
 <a id="I:E">
 <!--   -->
@@ -142,6 +148,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">Returns date of grade as LocalDate object</div>
 </dd>
+<dt><span class="memberNameLink"><a href="Gradebook.html#getDiplomaGrade()">getDiplomaGrade()</a></span> - Method in class <a href="Gradebook.html" title="class in &lt;Unnamed&gt;">Gradebook</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="Grade.html#getForm()">getForm()</a></span> - Method in class <a href="Grade.html" title="class in &lt;Unnamed&gt;">Grade</a></dt>
 <dd>
 <div class="block">Returns form of attestation</div>
@@ -152,7 +160,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dd>
 <dt><span class="memberNameLink"><a href="Gradebook.html#getGrade(int,java.lang.String)">getGrade(int, String)</a></span> - Method in class <a href="Gradebook.html" title="class in &lt;Unnamed&gt;">Gradebook</a></dt>
 <dd>
-<div class="block">Get grade in selected semester and subject</div>
+<div class="block">Get grade in selected semester and subject, or for the qualifying work</div>
 </dd>
 <dt><span class="memberNameLink"><a href="Gradebook.html#getJustGrades(int)">getJustGrades(int)</a></span> - Method in class <a href="Gradebook.html" title="class in &lt;Unnamed&gt;">Gradebook</a></dt>
 <dd>
@@ -166,10 +174,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">Returns patronymic of person</div>
 </dd>
-<dt><span class="memberNameLink"><a href="Gradebook.html#getQualifyingWorkGrade()">getQualifyingWorkGrade()</a></span> - Method in class <a href="Gradebook.html" title="class in &lt;Unnamed&gt;">Gradebook</a></dt>
-<dd>
-<div class="block">Returns qualifying work grade</div>
-</dd>
 <dt><span class="memberNameLink"><a href="Gradebook.html#getStudent()">getStudent()</a></span> - Method in class <a href="Gradebook.html" title="class in &lt;Unnamed&gt;">Gradebook</a></dt>
 <dd>
 <div class="block">Returns student as Person class object</div>
@@ -182,7 +186,11 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">Returns teacher as Person class object</div>
 </dd>
+<dt><span class="memberNameLink"><a href="DiplomaGrade.html#getThesisTopic()">getThesisTopic()</a></span> - Method in class <a href="DiplomaGrade.html" title="class in &lt;Unnamed&gt;">DiplomaGrade</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="Grade.html" title="class in &lt;Unnamed&gt;"><span class="typeNameLink">Grade</span></a> - Class in <a href="package-summary.html">&lt;Unnamed&gt;</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="Grade.html#%3Cinit%3E()">Grade()</a></span> - Constructor for class <a href="Grade.html" title="class in &lt;Unnamed&gt;">Grade</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="Grade.html#%3Cinit%3E(int)">Grade(int)</a></span> - Constructor for class <a href="Grade.html" title="class in &lt;Unnamed&gt;">Grade</a></dt>
 <dd>
@@ -235,6 +243,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">Initialises Person object</div>
 </dd>
 </dl>
+<a id="I:Q">
+<!--   -->
+</a>
+<h2 class="title">Q</h2>
+<dl>
+<dt><span class="memberNameLink"><a href="Grade.FormType.html#qualifyingWork">qualifyingWork</a></span> - <a href="Grade.FormType.html" title="enum in &lt;Unnamed&gt;">Grade.FormType</a></dt>
+<dd>&nbsp;</dd>
+</dl>
 <a id="I:S">
 <!--   -->
 </a>
@@ -244,6 +260,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">Sets date of grade to given date as LocalDate object</div>
 </dd>
+<dt><span class="memberNameLink"><a href="Gradebook.html#setDiplomaGrade(DiplomaGrade)">setDiplomaGrade(DiplomaGrade)</a></span> - Method in class <a href="Gradebook.html" title="class in &lt;Unnamed&gt;">Gradebook</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="Grade.html#setForm(Grade.FormType)">setForm(Grade.FormType)</a></span> - Method in class <a href="Grade.html" title="class in &lt;Unnamed&gt;">Grade</a></dt>
 <dd>
 <div class="block">Sets form of attestation</div>
@@ -260,10 +278,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">Sets patronymic of person</div>
 </dd>
-<dt><span class="memberNameLink"><a href="Gradebook.html#setQualifyingWorkGrade(int)">setQualifyingWorkGrade(int)</a></span> - Method in class <a href="Gradebook.html" title="class in &lt;Unnamed&gt;">Gradebook</a></dt>
-<dd>
-<div class="block">Sets qualifying work grade</div>
-</dd>
 <dt><span class="memberNameLink"><a href="Gradebook.html#setStudent(Person)">setStudent(Person)</a></span> - Method in class <a href="Gradebook.html" title="class in &lt;Unnamed&gt;">Gradebook</a></dt>
 <dd>
 <div class="block">Sets student to Person class object that given as parameter</div>
@@ -276,6 +290,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">Sets teacher to Person class object given as parameter</div>
 </dd>
+<dt><span class="memberNameLink"><a href="DiplomaGrade.html#setThesisTopic(java.lang.String)">setThesisTopic(String)</a></span> - Method in class <a href="DiplomaGrade.html" title="class in &lt;Unnamed&gt;">DiplomaGrade</a></dt>
+<dd>&nbsp;</dd>
 </dl>
 <a id="I:T">
 <!--   -->
@@ -303,7 +319,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 the order they are declared.</div>
 </dd>
 </dl>
-<a href="#I:A">A</a>&nbsp;<a href="#I:C">C</a>&nbsp;<a href="#I:D">D</a>&nbsp;<a href="#I:E">E</a>&nbsp;<a href="#I:G">G</a>&nbsp;<a href="#I:I">I</a>&nbsp;<a href="#I:P">P</a>&nbsp;<a href="#I:S">S</a>&nbsp;<a href="#I:T">T</a>&nbsp;<a href="#I:V">V</a>&nbsp;<br><a href="allclasses-index.html">All&nbsp;Classes</a>&nbsp;<a href="allpackages-index.html">All&nbsp;Packages</a></div>
+<a href="#I:A">A</a>&nbsp;<a href="#I:C">C</a>&nbsp;<a href="#I:D">D</a>&nbsp;<a href="#I:E">E</a>&nbsp;<a href="#I:G">G</a>&nbsp;<a href="#I:I">I</a>&nbsp;<a href="#I:P">P</a>&nbsp;<a href="#I:Q">Q</a>&nbsp;<a href="#I:S">S</a>&nbsp;<a href="#I:T">T</a>&nbsp;<a href="#I:V">V</a>&nbsp;<br><a href="allclasses-index.html">All&nbsp;Classes</a>&nbsp;<a href="allpackages-index.html">All&nbsp;Packages</a></div>
 </main>
 <footer role="contentinfo">
 <nav role="navigation">

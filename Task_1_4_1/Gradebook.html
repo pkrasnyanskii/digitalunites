@@ -184,7 +184,7 @@ extends java.lang.Object</pre>
         java.lang.String&nbsp;subject,
         <a href="Grade.html" title="class in &lt;Unnamed&gt;">Grade</a>&nbsp;grade)</code></th>
 <td class="colLast">
-<div class="block">Adds grade in selected semester and subject</div>
+<div class="block">Adds grade in selected semester and subject, or for the qualifying work</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
@@ -202,25 +202,23 @@ extends java.lang.Object</pre>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
+<td class="colFirst"><code><a href="DiplomaGrade.html" title="class in &lt;Unnamed&gt;">DiplomaGrade</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getDiplomaGrade()">getDiplomaGrade</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="Grade.html" title="class in &lt;Unnamed&gt;">Grade</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getGrade(int,java.lang.String)">getGrade</a></span>&#8203;(int&nbsp;semester,
         java.lang.String&nbsp;subject)</code></th>
 <td class="colLast">
-<div class="block">Get grade in selected semester and subject</div>
+<div class="block">Get grade in selected semester and subject, or for the qualifying work</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>java.util.ArrayList&lt;java.lang.Integer&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getJustGrades(int)">getJustGrades</a></span>&#8203;(int&nbsp;semester)</code></th>
 <td class="colLast">
 <div class="block">Returns grades in selected semester as list of integer values</div>
-</td>
-</tr>
-<tr id="i5" class="rowColor">
-<td class="colFirst"><code>int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getQualifyingWorkGrade()">getQualifyingWorkGrade</a></span>()</code></th>
-<td class="colLast">
-<div class="block">Returns qualifying work grade</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
@@ -246,10 +244,8 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setQualifyingWorkGrade(int)">setQualifyingWorkGrade</a></span>&#8203;(int&nbsp;qualifyingWorkGrade)</code></th>
-<td class="colLast">
-<div class="block">Sets qualifying work grade</div>
-</td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setDiplomaGrade(DiplomaGrade)">setDiplomaGrade</a></span>&#8203;(<a href="DiplomaGrade.html" title="class in &lt;Unnamed&gt;">DiplomaGrade</a>&nbsp;diplomaGrade)</code></th>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i10" class="altColor">
 <td class="colFirst"><code>void</code></td>
@@ -310,32 +306,22 @@ extends java.lang.Object</pre>
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a id="setQualifyingWorkGrade(int)">
+<a id="setDiplomaGrade(DiplomaGrade)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>setQualifyingWorkGrade</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;setQualifyingWorkGrade&#8203;(int&nbsp;qualifyingWorkGrade)</pre>
-<div class="block">Sets qualifying work grade</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>qualifyingWorkGrade</code> - qualifying work grade to set</dd>
-</dl>
+<h4>setDiplomaGrade</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;setDiplomaGrade&#8203;(<a href="DiplomaGrade.html" title="class in &lt;Unnamed&gt;">DiplomaGrade</a>&nbsp;diplomaGrade)</pre>
 </li>
 </ul>
-<a id="getQualifyingWorkGrade()">
+<a id="getDiplomaGrade()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>getQualifyingWorkGrade</h4>
-<pre class="methodSignature">public&nbsp;int&nbsp;getQualifyingWorkGrade()</pre>
-<div class="block">Returns qualifying work grade</div>
-<dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>qualifying work grade</dd>
-</dl>
+<h4>getDiplomaGrade</h4>
+<pre class="methodSignature">public&nbsp;<a href="DiplomaGrade.html" title="class in &lt;Unnamed&gt;">DiplomaGrade</a>&nbsp;getDiplomaGrade()</pre>
 </li>
 </ul>
 <a id="getStudent()">
@@ -375,11 +361,11 @@ extends java.lang.Object</pre>
 <pre class="methodSignature">public&nbsp;void&nbsp;addGrade&#8203;(int&nbsp;semester,
                      java.lang.String&nbsp;subject,
                      <a href="Grade.html" title="class in &lt;Unnamed&gt;">Grade</a>&nbsp;grade)</pre>
-<div class="block">Adds grade in selected semester and subject</div>
+<div class="block">Adds grade in selected semester and subject, or for the qualifying work</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>semester</code> - semester number (0-8)</dd>
-<dd><code>subject</code> - string name of subject</dd>
+<dd><code>semester</code> - semester number (0-8) or -1 for qualifying work</dd>
+<dd><code>subject</code> - string name of subject or null for qualifying work</dd>
 <dd><code>grade</code> - grade to add</dd>
 </dl>
 </li>
@@ -392,11 +378,11 @@ extends java.lang.Object</pre>
 <h4>getGrade</h4>
 <pre class="methodSignature">public&nbsp;<a href="Grade.html" title="class in &lt;Unnamed&gt;">Grade</a>&nbsp;getGrade&#8203;(int&nbsp;semester,
                       java.lang.String&nbsp;subject)</pre>
-<div class="block">Get grade in selected semester and subject</div>
+<div class="block">Get grade in selected semester and subject, or for the qualifying work</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>semester</code> - semester number (0-8)</dd>
-<dd><code>subject</code> - string name of subject</dd>
+<dd><code>semester</code> - semester number (0-8) or -1 for qualifying work</dd>
+<dd><code>subject</code> - string name of subject or null for qualifying work</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>Grade object</dd>
 </dl>
