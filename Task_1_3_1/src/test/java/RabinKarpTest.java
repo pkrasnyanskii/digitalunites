@@ -23,12 +23,12 @@ public class RabinKarpTest {
     }
 
     @Test
-    public void countTest() throws IOException {
+    public void bigTextTest() throws IOException {
         try (InputStream stream =
                      getClass().getClassLoader().getResourceAsStream("text_big.txt")) {
             RabinKarp alg = new RabinKarp(stream);
-            Integer act = Math.toIntExact(alg.rabinKarp("a").stream().count());
-            Integer exp = 120;
+            List<Integer> act = alg.rabinKarp("beautiful life");
+            List<Integer> exp = Arrays.asList(1138);
 
             Assertions.assertEquals(exp, act);
         }
