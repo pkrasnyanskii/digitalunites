@@ -21,7 +21,6 @@ public class RabinKarpTest {
             Assertions.assertEquals(exp, act);
         }
     }
-
     @Test
     public void bigTextTest() throws IOException {
         try (InputStream stream =
