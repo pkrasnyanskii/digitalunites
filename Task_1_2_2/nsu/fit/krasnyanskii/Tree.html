@@ -165,12 +165,16 @@ implements java.util.Collection&lt;T&gt;</pre>
 <tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="Tree.BFS.html" title="class in nsu.fit.krasnyanskii">Tree.BFS</a></span></code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">This class implements the breadth-first search (BFS) algorithm to traverse through the tree in a level-wise manner.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="Tree.DFS.html" title="class in nsu.fit.krasnyanskii">Tree.DFS</a></span></code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">A depth-first search implementation of an iterator over the elements in the tree.</div>
+</td>
 </tr>
 </table>
 </li>
@@ -192,7 +196,7 @@ implements java.util.Collection&lt;T&gt;</pre>
 <tr class="altColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E()">Tree</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Tree with root</div>
+<div class="block">Constructs a new Tree with a root node</div>
 </td>
 </tr>
 </table>
@@ -216,77 +220,108 @@ implements java.util.Collection&lt;T&gt;</pre>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#add(T)">add</a></span>&#8203;(<a href="Tree.html" title="type parameter in Tree">T</a>&nbsp;t)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Adds the specified element as a child of the root node.</div>
+</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addAll(java.util.Collection)">addAll</a></span>&#8203;(java.util.Collection&lt;? extends <a href="Tree.html" title="type parameter in Tree">T</a>&gt;&nbsp;c)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Adds all the elements in the specified collection to the tree.</div>
+</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#clear()">clear</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Removes all elements from the tree.</div>
+</td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#contains(java.lang.Object)">contains</a></span>&#8203;(java.lang.Object&nbsp;obj)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Returns true if this collection contains the specified element.</div>
+</td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#containsAll(java.util.Collection)">containsAll</a></span>&#8203;(java.util.Collection&lt;?&gt;&nbsp;c)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Returns true if this tree contains all of the elements in the specified collection.</div>
+</td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isEmpty()">isEmpty</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Returns true if this collection contains no elements.</div>
+</td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>java.util.Iterator&lt;<a href="Tree.html" title="type parameter in Tree">T</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#iterator()">iterator</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Returns an iterator over the elements contained in this collection.</div>
+</td>
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code>java.util.Iterator&lt;<a href="Tree.html" title="type parameter in Tree">T</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#iteratorBFS()">iteratorBFS</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Returns an iterator over the elements in this tree in breadth-first order.</div>
+</td>
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>java.util.Iterator&lt;<a href="Tree.html" title="type parameter in Tree">T</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#iteratorDFS()">iteratorDFS</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Returns an iterator over the elements in this tree in depth-first order.</div>
+</td>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#remove(java.lang.Object)">remove</a></span>&#8203;(java.lang.Object&nbsp;obj)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Removes the first occurrence of the specified element from the tree if it is present.</div>
+</td>
 </tr>
 <tr id="i10" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removeAll(java.util.Collection)">removeAll</a></span>&#8203;(java.util.Collection&lt;?&gt;&nbsp;c)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Removes all of the elements in the specified collection from the tree.</div>
+</td>
 </tr>
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#retainAll(java.util.Collection)">retainAll</a></span>&#8203;(java.util.Collection&lt;?&gt;&nbsp;c)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Retains only the elements in this tree that are contained in the specified collection.</div>
+</td>
 </tr>
 <tr id="i12" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#size()">size</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Returns the number of elements in this collection.</div>
+</td>
 </tr>
 <tr id="i13" class="rowColor">
 <td class="colFirst"><code>java.lang.Object[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toArray()">toArray</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Returns an array containing all the elements in this collection.</div>
+</td>
 </tr>
 <tr id="i14" class="altColor">
 <td class="colFirst"><code>&lt;T1&gt;&nbsp;T1[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toArray(T1%5B%5D)">toArray</a></span>&#8203;(T1[]&nbsp;a)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Returns an array containing all the elements in this collection; the runtime type of the returned array
+ is that of the specified array.</div>
+</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -333,7 +368,7 @@ implements java.util.Collection&lt;T&gt;</pre>
 <li class="blockList">
 <h4>Tree</h4>
 <pre>public&nbsp;Tree()</pre>
-<div class="block">Tree with root</div>
+<div class="block">Constructs a new Tree with a root node</div>
 </li>
 </ul>
 </li>
@@ -353,9 +388,12 @@ implements java.util.Collection&lt;T&gt;</pre>
 <li class="blockList">
 <h4>size</h4>
 <pre class="methodSignature">public&nbsp;int&nbsp;size()</pre>
+<div class="block">Returns the number of elements in this collection.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code>size</code>&nbsp;in interface&nbsp;<code>java.util.Collection&lt;<a href="Tree.html" title="type parameter in Tree">T</a>&gt;</code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the number of elements in this collection</dd>
 </dl>
 </li>
 </ul>
@@ -366,9 +404,12 @@ implements java.util.Collection&lt;T&gt;</pre>
 <li class="blockList">
 <h4>isEmpty</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isEmpty()</pre>
+<div class="block">Returns true if this collection contains no elements.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code>isEmpty</code>&nbsp;in interface&nbsp;<code>java.util.Collection&lt;<a href="Tree.html" title="type parameter in Tree">T</a>&gt;</code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>true if this collection contains no elements</dd>
 </dl>
 </li>
 </ul>
@@ -379,9 +420,14 @@ implements java.util.Collection&lt;T&gt;</pre>
 <li class="blockList">
 <h4>contains</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;contains&#8203;(java.lang.Object&nbsp;obj)</pre>
+<div class="block">Returns true if this collection contains the specified element.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code>contains</code>&nbsp;in interface&nbsp;<code>java.util.Collection&lt;<a href="Tree.html" title="type parameter in Tree">T</a>&gt;</code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>obj</code> - the element whose presence in this collection is to be tested</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>true if this collection contains the specified element</dd>
 </dl>
 </li>
 </ul>
@@ -392,11 +438,14 @@ implements java.util.Collection&lt;T&gt;</pre>
 <li class="blockList">
 <h4>iterator</h4>
 <pre class="methodSignature">public&nbsp;java.util.Iterator&lt;<a href="Tree.html" title="type parameter in Tree">T</a>&gt;&nbsp;iterator()</pre>
+<div class="block">Returns an iterator over the elements contained in this collection.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code>iterator</code>&nbsp;in interface&nbsp;<code>java.util.Collection&lt;<a href="Tree.html" title="type parameter in Tree">T</a>&gt;</code></dd>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code>iterator</code>&nbsp;in interface&nbsp;<code>java.lang.Iterable&lt;<a href="Tree.html" title="type parameter in Tree">T</a>&gt;</code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>an iterator over the elements contained in this collection</dd>
 </dl>
 </li>
 </ul>
@@ -407,6 +456,11 @@ implements java.util.Collection&lt;T&gt;</pre>
 <li class="blockList">
 <h4>iteratorDFS</h4>
 <pre class="methodSignature">public&nbsp;java.util.Iterator&lt;<a href="Tree.html" title="type parameter in Tree">T</a>&gt;&nbsp;iteratorDFS()</pre>
+<div class="block">Returns an iterator over the elements in this tree in depth-first order.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>an iterator over the elements in this tree in depth-first order</dd>
+</dl>
 </li>
 </ul>
 <a id="iteratorBFS()">
@@ -416,6 +470,11 @@ implements java.util.Collection&lt;T&gt;</pre>
 <li class="blockList">
 <h4>iteratorBFS</h4>
 <pre class="methodSignature">public&nbsp;java.util.Iterator&lt;<a href="Tree.html" title="type parameter in Tree">T</a>&gt;&nbsp;iteratorBFS()</pre>
+<div class="block">Returns an iterator over the elements in this tree in breadth-first order.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>an iterator over the elements in this tree in breadth-first order</dd>
+</dl>
 </li>
 </ul>
 <a id="toArray()">
@@ -425,9 +484,12 @@ implements java.util.Collection&lt;T&gt;</pre>
 <li class="blockList">
 <h4>toArray</h4>
 <pre class="methodSignature">public&nbsp;java.lang.Object[]&nbsp;toArray()</pre>
+<div class="block">Returns an array containing all the elements in this collection.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code>toArray</code>&nbsp;in interface&nbsp;<code>java.util.Collection&lt;<a href="Tree.html" title="type parameter in Tree">T</a>&gt;</code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>an array containing all the elements in this collection</dd>
 </dl>
 </li>
 </ul>
@@ -440,9 +502,17 @@ implements java.util.Collection&lt;T&gt;</pre>
 <li class="blockList">
 <h4>toArray</h4>
 <pre class="methodSignature">public&nbsp;&lt;T1&gt;&nbsp;T1[]&nbsp;toArray&#8203;(T1[]&nbsp;a)</pre>
+<div class="block">Returns an array containing all the elements in this collection; the runtime type of the returned array
+ is that of the specified array.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code>toArray</code>&nbsp;in interface&nbsp;<code>java.util.Collection&lt;<a href="Tree.html" title="type parameter in Tree">T</a>&gt;</code></dd>
+<dt><span class="paramLabel">Type Parameters:</span></dt>
+<dd><code>T1</code> - the runtime type of the array to contain the collection</dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>a</code> - the array into which the elements of this collection are to be stored</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>an array containing all the elements in this collection</dd>
 </dl>
 </li>
 </ul>
@@ -455,9 +525,17 @@ implements java.util.Collection&lt;T&gt;</pre>
 <li class="blockList">
 <h4>add</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;add&#8203;(<a href="Tree.html" title="type parameter in Tree">T</a>&nbsp;t)</pre>
+<div class="block">Adds the specified element as a child of the root node. Throws a NullPointerException
+ if the specified element is null.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code>add</code>&nbsp;in interface&nbsp;<code>java.util.Collection&lt;<a href="Tree.html" title="type parameter in Tree">T</a>&gt;</code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>t</code> - the element to add</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>true, always</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code>java.lang.NullPointerException</code> - if t is null</dd>
 </dl>
 </li>
 </ul>
@@ -468,9 +546,18 @@ implements java.util.Collection&lt;T&gt;</pre>
 <li class="blockList">
 <h4>remove</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;remove&#8203;(java.lang.Object&nbsp;obj)</pre>
+<div class="block">Removes the first occurrence of the specified element from the tree if it is present.
+ Returns true if the tree contained the specified element, false otherwise. Throws a
+ NullPointerException if the specified object is null.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code>remove</code>&nbsp;in interface&nbsp;<code>java.util.Collection&lt;<a href="Tree.html" title="type parameter in Tree">T</a>&gt;</code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>obj</code> - the object to remove</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>true if the tree contained the specified object, false otherwise</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code>java.lang.NullPointerException</code> - if obj is null</dd>
 </dl>
 </li>
 </ul>
@@ -481,9 +568,14 @@ implements java.util.Collection&lt;T&gt;</pre>
 <li class="blockList">
 <h4>containsAll</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;containsAll&#8203;(java.util.Collection&lt;?&gt;&nbsp;c)</pre>
+<div class="block">Returns true if this tree contains all of the elements in the specified collection.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code>containsAll</code>&nbsp;in interface&nbsp;<code>java.util.Collection&lt;<a href="Tree.html" title="type parameter in Tree">T</a>&gt;</code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>c</code> - the collection to check for containment in this tree</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>true if this tree contains all of the elements in the specified collection</dd>
 </dl>
 </li>
 </ul>
@@ -494,9 +586,17 @@ implements java.util.Collection&lt;T&gt;</pre>
 <li class="blockList">
 <h4>addAll</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;addAll&#8203;(java.util.Collection&lt;? extends <a href="Tree.html" title="type parameter in Tree">T</a>&gt;&nbsp;c)</pre>
+<div class="block">Adds all the elements in the specified collection to the tree. Throws a
+ NullPointerException if the specified collection is null.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code>addAll</code>&nbsp;in interface&nbsp;<code>java.util.Collection&lt;<a href="Tree.html" title="type parameter in Tree">T</a>&gt;</code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>c</code> - the collection whose elements are to be added to this tree</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>true, always</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code>java.lang.NullPointerException</code> - if c is null</dd>
 </dl>
 </li>
 </ul>
@@ -507,9 +607,17 @@ implements java.util.Collection&lt;T&gt;</pre>
 <li class="blockList">
 <h4>removeAll</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;removeAll&#8203;(java.util.Collection&lt;?&gt;&nbsp;c)</pre>
+<div class="block">Removes all of the elements in the specified collection from the tree. Throws a
+ NullPointerException if the specified collection is null.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code>removeAll</code>&nbsp;in interface&nbsp;<code>java.util.Collection&lt;<a href="Tree.html" title="type parameter in Tree">T</a>&gt;</code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>c</code> - the collection whose elements are to be removed from this tree</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>true, always</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code>java.lang.NullPointerException</code> - if c is null</dd>
 </dl>
 </li>
 </ul>
@@ -520,9 +628,18 @@ implements java.util.Collection&lt;T&gt;</pre>
 <li class="blockList">
 <h4>retainAll</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;retainAll&#8203;(java.util.Collection&lt;?&gt;&nbsp;c)</pre>
+<div class="block">Retains only the elements in this tree that are contained in the specified collection.
+ In other words, removes from this tree all of its elements that are not contained in the
+ specified collection. Throws a NullPointerException if the specified collection is null.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code>retainAll</code>&nbsp;in interface&nbsp;<code>java.util.Collection&lt;<a href="Tree.html" title="type parameter in Tree">T</a>&gt;</code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>c</code> - the collection to retain</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>true if this tree was modified as a result of this operation, false otherwise</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code>java.lang.NullPointerException</code> - if c is null</dd>
 </dl>
 </li>
 </ul>
@@ -533,6 +650,7 @@ implements java.util.Collection&lt;T&gt;</pre>
 <li class="blockList">
 <h4>clear</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;clear()</pre>
+<div class="block">Removes all elements from the tree.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code>clear</code>&nbsp;in interface&nbsp;<code>java.util.Collection&lt;<a href="Tree.html" title="type parameter in Tree">T</a>&gt;</code></dd>
