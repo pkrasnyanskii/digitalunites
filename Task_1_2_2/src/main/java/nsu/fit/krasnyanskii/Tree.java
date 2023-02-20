@@ -3,128 +3,111 @@ package nsu.fit.krasnyanskii;
 import java.util.*;
 
 /**
- * Classic tree data structure
- * @param <T> class of values
+ * The tree implementing collection with DFS and BFS algorithms.
+ *
+ * @param <T> type of the elements
  */
 public class Tree<T> implements Collection<T> {
-
-    /**
-     * Class for tree's node
-     * @param <T> class of values
-     */
-    private static class Node<T> {
-        private T value;
-        private ArrayList<Node<T>> children;
-        private Node<T> parent;
-
-        /**
-         * Constructs a new node with no parent and no value
-         */
-        private Node() {
-            value = null;
-            children = new ArrayList<>();
-            parent = null;
-        }
-    }
-
     private final Node<T> root;
-    private int count;
-    private int countModified;
+    private int cnt;
+    private int cntChanges;
 
     /**
-     * Constructs a new Tree with a root node
+     * Creates an empty tree.
      */
-    public Tree(){
+    public Tree() {
+        cnt = 0;
+        cntChanges = 0;
         root = new Node<>();
-        count = 0;
+        root.children = new ArrayList<>();
     }
 
     /**
-     * Returns the number of elements in this collection.
-     * @return the number of elements in this collection
+     * Determines the number of elements in the tree.
+     *
+     * @return the number of elements in the tree
      */
     @Override
     public int size() {
-        return count;
+        return cnt;
     }
 
     /**
-     * Returns true if this collection contains no elements.
-     * @return true if this collection contains no elements
+     * Determines if the tree contains elements.
+     *
+     * @return true if the tree is empty
      */
     @Override
     public boolean isEmpty() {
-        return count == 0;
+        return cnt == 0;
     }
 
     /**
-     * Returns true if this collection contains the specified element.
-     * @param obj the element whose presence in this collection is to be tested
+     * Determines if the tree contains the specified element.
+     *
+     * @param o element whose presence in the tree is to be tested
      * @return true if this collection contains the specified element
      */
     @Override
-    public boolean contains(Object obj) {
-        return stream().anyMatch(elem -> elem.equals(obj));
+    public boolean contains(Object o) {
+        return stream().anyMatch(elem -> elem.equals(o));
     }
 
     /**
-     * Returns an iterator over the elements contained in this collection.
-     * @return an iterator over the elements contained in this collection
+     * Returns a DFS iterator over the elements in the tree.
+     * Elements will be returned in depth-first order.
+     *
+     * @return a DFS Iterator over the elements in the tree
      */
     @Override
     public Iterator<T> iterator() {
-        return null;
-    }
-
-    /**
-     * Returns an iterator over the elements in this tree in depth-first order.
-     * @return an iterator over the elements in this tree in depth-first order
-     */
-    public Iterator<T> iteratorDFS() {
         return new DFS();
     }
 
     /**
-     * Returns an iterator over the elements in this tree in breadth-first order.
-     * @return an iterator over the elements in this tree in breadth-first order
+     * Returns a BFS iterator over the elements in the tree.
+     * Elements will be returned in breadth-first order.
+     *
+     * @return a BFS Iterator over the elements in the tree
      */
     public Iterator<T> iteratorBFS() {
         return new BFS();
     }
 
     /**
-     * Returns an array containing all the elements in this collection.
-     * @return an array containing all the elements in this collection
+     * Returns an array containing all elements in the tree.
+     * Elements will be in depth-first order.
+     *
+     * @return an array containing all elements in the tree
      */
     @Override
     public Object[] toArray() {
-        return toArray(new Object[count]);
+        return toArray(new Object[cnt]);
     }
 
     /**
-     * Returns an array containing all the elements in this collection; the runtime type of the returned array
-     * is that of the specified array.
-     * @param a the array into which the elements of this collection are to be stored
-     * @param <T1> the runtime type of the array to contain the collection
-     * @return an array containing all the elements in this collection
+     * Returns an array containing all elements in the tree.
+     * The runtime type of the returned array is that of the specified array.
+     * Elements will be in depth-first order.
+     *
+     * @return an array containing all elements in the tree
      */
     @Override
-    @SuppressWarnings("Not checked")
+    @SuppressWarnings("unchecked")
     public <T1> T1[] toArray(T1[] a) {
         List<T> list = new ArrayList<>();
-        for (T value : this) {
-            list.add(value);
+        for (T elem : this) {
+            list.add(elem);
         }
         return (T1[]) list.toArray();
     }
 
     /**
-     * Adds the specified element as a child of the root node. Throws a NullPointerException
-     * if the specified element is null.
+     * Adds element to the tree.
      *
-     * @param t the element to add
-     * @return true, always
-     * @throws NullPointerException if t is null
+     * @param t element to add
+     * @return true if the element is added
+     * @throws NullPointerException if the element is null
      */
     @Override
     public boolean add(T t) {
@@ -132,32 +115,30 @@ public class Tree<T> implements Collection<T> {
             throw new NullPointerException();
         }
         Node<T> node = new Node<>();
-        node.value = t;
+        node.elem = t;
         node.parent = root;
         root.children.add(node);
-        count++;
-        countModified++;
+        cnt++;
+        cntChanges++;
         return true;
     }
 
     /**
-     * Removes the first occurrence of the specified element from the tree if it is present.
-     * Returns true if the tree contained the specified element, false otherwise. Throws a
-     * NullPointerException if the specified object is null.
+     * Removes a single instance of the specified element from this collection.
      *
-     * @param obj the object to remove
-     * @return true if the tree contained the specified object, false otherwise
-     * @throws NullPointerException if obj is null
+     * @param o element to be removed from the tree
+     * @return true if the element is in the tree
+     * @throws NullPointerException if the element is null
      */
     @Override
-    public boolean remove(Object obj) {
-        if (obj == null) {
+    public boolean remove(Object o) {
+        if (o == null) {
             throw new NullPointerException();
         }
         var iterator = iterator();
         while (iterator.hasNext()) {
-            T value = iterator.next();
-            if (value.equals(obj)) {
+            T elem = iterator.next();
+            if (elem.equals(o)) {
                 iterator.remove();
                 return true;
             }
@@ -166,15 +147,15 @@ public class Tree<T> implements Collection<T> {
     }
 
     /**
-     * Returns true if this tree contains all of the elements in the specified collection.
+     * Determines if the tree contains all elements in the specified collection.
      *
-     * @param c the collection to check for containment in this tree
-     * @return true if this tree contains all of the elements in the specified collection
+     * @param c collection to be checked for containment in the tree
+     * @return true if the tree contains all elements in the specified collection.
      */
     @Override
     public boolean containsAll(Collection<?> c) {
-        for (Object value : c) {
-            if (!contains(value)) {
+        for (Object elem : c) {
+            if (!contains(elem)) {
                 return false;
             }
         }
@@ -182,12 +163,11 @@ public class Tree<T> implements Collection<T> {
     }
 
     /**
-     * Adds all the elements in the specified collection to the tree. Throws a
-     * NullPointerException if the specified collection is null.
+     * Adds all elements in the specified collection to the tree.
      *
-     * @param c the collection whose elements are to be added to this tree
-     * @return true, always
-     * @throws NullPointerException if c is null
+     * @param c collection containing elements to be added to the tree
+     * @return true if this collection changed as a result of the call
+     * @throws NullPointerException if the collection is null
      */
     @Override
     public boolean addAll(Collection<? extends T> c) {
@@ -199,12 +179,11 @@ public class Tree<T> implements Collection<T> {
     }
 
     /**
-     * Removes all of the elements in the specified collection from the tree. Throws a
-     * NullPointerException if the specified collection is null.
+     * Removes all the tree's elements,
+     * that are also contained in the specified collection.
      *
-     * @param c the collection whose elements are to be removed from this tree
-     * @return true, always
-     * @throws NullPointerException if c is null
+     * @param c collection containing elements to be removed from the tree
+     * @return true if this collection changed as a result of the call
      */
     @Override
     public boolean removeAll(Collection<?> c) {
@@ -213,13 +192,11 @@ public class Tree<T> implements Collection<T> {
     }
 
     /**
-     * Retains only the elements in this tree that are contained in the specified collection.
-     * In other words, removes from this tree all of its elements that are not contained in the
-     * specified collection. Throws a NullPointerException if the specified collection is null.
+     * Retains only the elements in the tree,
+     * that are contained in the specified collection.
      *
-     * @param c the collection to retain
-     * @return true if this tree was modified as a result of this operation, false otherwise
-     * @throws NullPointerException if c is null
+     * @param c collection containing elements to be retained in the tree
+     * @return true if this collection changed as a result of the call
      */
     @Override
     public boolean retainAll(Collection<?> c) {
@@ -240,30 +217,47 @@ public class Tree<T> implements Collection<T> {
         return flag;
     }
 
-
     /**
      * Removes all elements from the tree.
      */
     @Override
     public void clear() {
-        count = 0;
-        countModified = 0;
-        root.value = null;
+        cnt = 0;
+        cntChanges = 0;
+        root.elem = null;
         root.children.clear();
     }
 
+    private static class Node<T> {
+        private T elem;
+        private ArrayList<Node<T>> children;
+        private Node<T> parent;
+
+        private Node() {
+            elem = null;
+            children = new ArrayList<>();
+            parent = null;
+        }
+    }
+
     /**
-     * A depth-first search implementation of an iterator over the elements in the tree.
+     * An iterator over the elements in the tree by depth-first search algorithm.
      */
     public class DFS implements Iterator<T> {
         private final Stack<Integer> stackOfIDs = new Stack<>();
-        private int expectCountModified = countModified;
+        private int expectedCntChanges = cntChanges;
         private Node<T> node = root;
         private int id = -1;
 
+        /**
+         * Determines if the iteration has more elements.
+         *
+         * @return true if the iteration has more elements
+         * @throws ConcurrentModificationException if the iterator made changes
+         */
         @Override
         public boolean hasNext() {
-            if (countModified != expectCountModified) {
+            if (cntChanges != expectedCntChanges) {
                 throw new ConcurrentModificationException();
             }
             while (id + 1 == node.children.size()) {
@@ -276,6 +270,12 @@ public class Tree<T> implements Collection<T> {
             return true;
         }
 
+        /**
+         * Returns the next element of the tree if it exists.
+         *
+         * @return the next element of the tree
+         * @throws NoSuchElementException if there are no more element
+         */
         @Override
         public T next() {
             if (!hasNext()) {
@@ -288,9 +288,12 @@ public class Tree<T> implements Collection<T> {
             stackOfIDs.push(id + 1);
             node = node.children.get(id + 1);
             id = -1;
-            return node.value;
+            return node.elem;
         }
 
+        /**
+         * Removes current node of the tree.
+         */
         @Override
         public void remove() {
             if (node.parent == null) {
@@ -302,41 +305,44 @@ public class Tree<T> implements Collection<T> {
                 node.parent.children.add(child);
                 child.parent = node.parent;
             }
-            count--;
-            countModified++;
-            expectCountModified++;
+            cnt--;
+            cntChanges++;
+            expectedCntChanges++;
         }
     }
 
     /**
-     * This class implements the breadth-first search (BFS) algorithm to traverse through the tree in a level-wise manner.
-     *
-     * It uses a queue to keep track of the nodes and their children in the tree.
+     * An iterator over the elements in the tree by breadth-first search algorithm.
      */
     public class BFS implements Iterator<T> {
         private final Queue<Node<T>> queue = new LinkedList<>();
-        private int expectedCntChanges = countModified;
+        private int expectedCntChanges = cntChanges;
         private Node<T> node = root;
 
 
-        /**
-         Constructs a new BFS iterator.
-         */
         private BFS() {
             queue.addAll(root.children);
         }
+
         /**
-         Returns true if there is another element to be traversed.
+         * Determines if the iteration has more elements.
+         *
+         * @return true if the iteration has more elements
+         * @throws ConcurrentModificationException if the iterator made changes
          */
         @Override
         public boolean hasNext() {
-            if (countModified != expectedCntChanges) {
+            if (cntChanges != expectedCntChanges) {
                 throw new ConcurrentModificationException();
             }
             return (!queue.isEmpty());
         }
+
         /**
-         Returns the next element to be traversed.
+         * Returns the next element of the tree if it exists.
+         *
+         * @return the next element of the tree
+         * @throws NoSuchElementException if there are no more element
          */
         @Override
         public T next() {
@@ -345,12 +351,11 @@ public class Tree<T> implements Collection<T> {
             }
             node = queue.remove();
             queue.addAll(node.children);
-            return node.value;
+            return node.elem;
         }
 
-         /**
-         Removes the last element returned by the iterator from the tree. The node and its children are removed and the
-         parent's children list is updated.
+        /**
+         * Removes current node of the tree.
          */
         @Override
         public void remove() {
@@ -363,8 +368,8 @@ public class Tree<T> implements Collection<T> {
                 node.parent.children.add(child);
                 child.parent = node.parent;
             }
-            count--;
-            countModified++;
+            cnt--;
+            cntChanges++;
             expectedCntChanges++;
         }
     }
