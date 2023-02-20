@@ -31,6 +31,7 @@ public class TreeTest {
             assertEquals(0, tree.size());
         }
     }
+
     @Test
     public void testRemoveNull() {
         try {
@@ -124,5 +125,32 @@ public class TreeTest {
         }
         assertEquals(expected, actual);
     }
-}
 
+    @Test
+    public void testIteratorDFS_EmptyTree() {
+        Tree<Integer> tree = new Tree<>();
+        Iterator<Integer> it = tree.iteratorDFS();
+        assertFalse(it.hasNext());
+    }
+
+    @Test
+    public void testIteratorDFS_SingleElement() {
+        Tree<Integer> tree = new Tree<>();
+        tree.add(1);
+        Iterator<Integer> it = tree.iteratorDFS();
+        assertTrue(it.hasNext());
+        assertEquals(1, it.next().intValue());
+        assertFalse(it.hasNext());
+    }
+
+    @Test
+    public void testIteratorDFS_RemovedElement() {
+        Tree<Integer> tree = new Tree<>();
+        tree.add(1);
+        tree.add(2);
+        tree.add(3);
+        Iterator<Integer> it = tree.iteratorDFS();
+
+
+    }
+}
