@@ -1,14 +1,16 @@
 package nsu.fit.krasnyanskii;
 
+import org.junit.Before;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
-import java.util.ConcurrentModificationException;
+import java.util.*;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TreeTest {
+
     private final int testAmount = 1000;
     private Tree<Integer> tree2;
     private Tree<Integer> tree = new Tree<>();
@@ -80,4 +82,47 @@ public class TreeTest {
         assertThrows(NullPointerException.class, () -> tree2.addAll(null));
     }
 
+    @Before
+    public void setup() {
+        tree = new Tree<>();
+        tree.add(1);
+        tree.add(2);
+        tree.add(3);
+        tree.add(4);
+        tree.add(5);
+
+        // create a tree like this:
+        //      1
+        //    / | \
+        //   2  3  4
+        //  /
+        // 5
+        tree.iteratorDFS();
+    }
+
+    @Test
+    public void testDFSWithSingleNode() {
+        Tree<Integer> tree = new Tree<>();
+        tree.add(1);
+        List<Integer> expected = Arrays.asList(1);
+        List<Integer> actual = new ArrayList<>();
+        for (Iterator<Integer> it = tree.iteratorDFS(); it.hasNext(); ) {
+            Integer i = it.next();
+            actual.add(i);
+        }
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testDFSWithEmptyTree() {
+        Tree<Integer> tree = new Tree<>();
+        List<Integer> expected = new ArrayList<>();
+        List<Integer> actual = new ArrayList<>();
+        for (Iterator<Integer> it = tree.iteratorDFS(); it.hasNext(); ) {
+            Integer i = it.next();
+            actual.add(i);
+        }
+        assertEquals(expected, actual);
+    }
 }
+
