@@ -98,11 +98,11 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dl>
 <dt><span class="memberNameLink"><a href="nsu/fit/krasnyanskii/Tree.html#add(T)">add(T)</a></span> - Method in class nsu.fit.krasnyanskii.<a href="nsu/fit/krasnyanskii/Tree.html" title="class in nsu.fit.krasnyanskii">Tree</a></dt>
 <dd>
-<div class="block">Adds the specified element as a child of the root node.</div>
+<div class="block">Adds element to the tree.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="nsu/fit/krasnyanskii/Tree.html#addAll(java.util.Collection)">addAll(Collection&lt;? extends T&gt;)</a></span> - Method in class nsu.fit.krasnyanskii.<a href="nsu/fit/krasnyanskii/Tree.html" title="class in nsu.fit.krasnyanskii">Tree</a></dt>
 <dd>
-<div class="block">Adds all the elements in the specified collection to the tree.</div>
+<div class="block">Adds all elements in the specified collection to the tree.</div>
 </dd>
 </dl>
 <a id="I:C">
@@ -116,11 +116,11 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dd>
 <dt><span class="memberNameLink"><a href="nsu/fit/krasnyanskii/Tree.html#contains(java.lang.Object)">contains(Object)</a></span> - Method in class nsu.fit.krasnyanskii.<a href="nsu/fit/krasnyanskii/Tree.html" title="class in nsu.fit.krasnyanskii">Tree</a></dt>
 <dd>
-<div class="block">Returns true if this collection contains the specified element.</div>
+<div class="block">Determines if the tree contains the specified element.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="nsu/fit/krasnyanskii/Tree.html#containsAll(java.util.Collection)">containsAll(Collection&lt;?&gt;)</a></span> - Method in class nsu.fit.krasnyanskii.<a href="nsu/fit/krasnyanskii/Tree.html" title="class in nsu.fit.krasnyanskii">Tree</a></dt>
 <dd>
-<div class="block">Returns true if this tree contains all of the elements in the specified collection.</div>
+<div class="block">Determines if the tree contains all elements in the specified collection.</div>
 </dd>
 </dl>
 <a id="I:D">
@@ -138,10 +138,12 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dl>
 <dt><span class="memberNameLink"><a href="nsu/fit/krasnyanskii/Tree.BFS.html#hasNext()">hasNext()</a></span> - Method in class nsu.fit.krasnyanskii.<a href="nsu/fit/krasnyanskii/Tree.BFS.html" title="class in nsu.fit.krasnyanskii">Tree.BFS</a></dt>
 <dd>
-<div class="block">Returns true if there is another element to be traversed.</div>
+<div class="block">Determines if the iteration has more elements.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="nsu/fit/krasnyanskii/Tree.DFS.html#hasNext()">hasNext()</a></span> - Method in class nsu.fit.krasnyanskii.<a href="nsu/fit/krasnyanskii/Tree.DFS.html" title="class in nsu.fit.krasnyanskii">Tree.DFS</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Determines if the iteration has more elements.</div>
+</dd>
 </dl>
 <a id="I:I">
 <!--   -->
@@ -150,19 +152,15 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dl>
 <dt><span class="memberNameLink"><a href="nsu/fit/krasnyanskii/Tree.html#isEmpty()">isEmpty()</a></span> - Method in class nsu.fit.krasnyanskii.<a href="nsu/fit/krasnyanskii/Tree.html" title="class in nsu.fit.krasnyanskii">Tree</a></dt>
 <dd>
-<div class="block">Returns true if this collection contains no elements.</div>
+<div class="block">Determines if the tree contains elements.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="nsu/fit/krasnyanskii/Tree.html#iterator()">iterator()</a></span> - Method in class nsu.fit.krasnyanskii.<a href="nsu/fit/krasnyanskii/Tree.html" title="class in nsu.fit.krasnyanskii">Tree</a></dt>
 <dd>
-<div class="block">Returns an iterator over the elements contained in this collection.</div>
+<div class="block">Returns a DFS iterator over the elements in the tree.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="nsu/fit/krasnyanskii/Tree.html#iteratorBFS()">iteratorBFS()</a></span> - Method in class nsu.fit.krasnyanskii.<a href="nsu/fit/krasnyanskii/Tree.html" title="class in nsu.fit.krasnyanskii">Tree</a></dt>
 <dd>
-<div class="block">Returns an iterator over the elements in this tree in breadth-first order.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="nsu/fit/krasnyanskii/Tree.html#iteratorDFS()">iteratorDFS()</a></span> - Method in class nsu.fit.krasnyanskii.<a href="nsu/fit/krasnyanskii/Tree.html" title="class in nsu.fit.krasnyanskii">Tree</a></dt>
-<dd>
-<div class="block">Returns an iterator over the elements in this tree in depth-first order.</div>
+<div class="block">Returns a BFS iterator over the elements in the tree.</div>
 </dd>
 </dl>
 <a id="I:N">
@@ -172,10 +170,12 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dl>
 <dt><span class="memberNameLink"><a href="nsu/fit/krasnyanskii/Tree.BFS.html#next()">next()</a></span> - Method in class nsu.fit.krasnyanskii.<a href="nsu/fit/krasnyanskii/Tree.BFS.html" title="class in nsu.fit.krasnyanskii">Tree.BFS</a></dt>
 <dd>
-<div class="block">Returns the next element to be traversed.</div>
+<div class="block">Returns the next element of the tree if it exists.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="nsu/fit/krasnyanskii/Tree.DFS.html#next()">next()</a></span> - Method in class nsu.fit.krasnyanskii.<a href="nsu/fit/krasnyanskii/Tree.DFS.html" title="class in nsu.fit.krasnyanskii">Tree.DFS</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the next element of the tree if it exists.</div>
+</dd>
 <dt><a href="nsu/fit/krasnyanskii/package-summary.html">nsu.fit.krasnyanskii</a> - package nsu.fit.krasnyanskii</dt>
 <dd>&nbsp;</dd>
 </dl>
@@ -186,21 +186,25 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dl>
 <dt><span class="memberNameLink"><a href="nsu/fit/krasnyanskii/Tree.BFS.html#remove()">remove()</a></span> - Method in class nsu.fit.krasnyanskii.<a href="nsu/fit/krasnyanskii/Tree.BFS.html" title="class in nsu.fit.krasnyanskii">Tree.BFS</a></dt>
 <dd>
-<div class="block">Removes the last element returned by the iterator from the tree.</div>
+<div class="block">Removes current node of the tree.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="nsu/fit/krasnyanskii/Tree.DFS.html#remove()">remove()</a></span> - Method in class nsu.fit.krasnyanskii.<a href="nsu/fit/krasnyanskii/Tree.DFS.html" title="class in nsu.fit.krasnyanskii">Tree.DFS</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Removes current node of the tree.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="nsu/fit/krasnyanskii/Tree.html#remove(java.lang.Object)">remove(Object)</a></span> - Method in class nsu.fit.krasnyanskii.<a href="nsu/fit/krasnyanskii/Tree.html" title="class in nsu.fit.krasnyanskii">Tree</a></dt>
 <dd>
-<div class="block">Removes the first occurrence of the specified element from the tree if it is present.</div>
+<div class="block">Removes a single instance of the specified element from this collection.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="nsu/fit/krasnyanskii/Tree.html#removeAll(java.util.Collection)">removeAll(Collection&lt;?&gt;)</a></span> - Method in class nsu.fit.krasnyanskii.<a href="nsu/fit/krasnyanskii/Tree.html" title="class in nsu.fit.krasnyanskii">Tree</a></dt>
 <dd>
-<div class="block">Removes all of the elements in the specified collection from the tree.</div>
+<div class="block">Removes all the tree's elements,
+ that are also contained in the specified collection.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="nsu/fit/krasnyanskii/Tree.html#retainAll(java.util.Collection)">retainAll(Collection&lt;?&gt;)</a></span> - Method in class nsu.fit.krasnyanskii.<a href="nsu/fit/krasnyanskii/Tree.html" title="class in nsu.fit.krasnyanskii">Tree</a></dt>
 <dd>
-<div class="block">Retains only the elements in this tree that are contained in the specified collection.</div>
+<div class="block">Retains only the elements in the tree,
+ that are contained in the specified collection.</div>
 </dd>
 </dl>
 <a id="I:S">
@@ -210,7 +214,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dl>
 <dt><span class="memberNameLink"><a href="nsu/fit/krasnyanskii/Tree.html#size()">size()</a></span> - Method in class nsu.fit.krasnyanskii.<a href="nsu/fit/krasnyanskii/Tree.html" title="class in nsu.fit.krasnyanskii">Tree</a></dt>
 <dd>
-<div class="block">Returns the number of elements in this collection.</div>
+<div class="block">Determines the number of elements in the tree.</div>
 </dd>
 </dl>
 <a id="I:T">
@@ -220,28 +224,27 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dl>
 <dt><span class="memberNameLink"><a href="nsu/fit/krasnyanskii/Tree.html#toArray()">toArray()</a></span> - Method in class nsu.fit.krasnyanskii.<a href="nsu/fit/krasnyanskii/Tree.html" title="class in nsu.fit.krasnyanskii">Tree</a></dt>
 <dd>
-<div class="block">Returns an array containing all the elements in this collection.</div>
+<div class="block">Returns an array containing all elements in the tree.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="nsu/fit/krasnyanskii/Tree.html#toArray(T1%5B%5D)">toArray(T1[])</a></span> - Method in class nsu.fit.krasnyanskii.<a href="nsu/fit/krasnyanskii/Tree.html" title="class in nsu.fit.krasnyanskii">Tree</a></dt>
 <dd>
-<div class="block">Returns an array containing all the elements in this collection; the runtime type of the returned array
- is that of the specified array.</div>
+<div class="block">Returns an array containing all elements in the tree.</div>
 </dd>
 <dt><a href="nsu/fit/krasnyanskii/Tree.html" title="class in nsu.fit.krasnyanskii"><span class="typeNameLink">Tree</span></a>&lt;<a href="nsu/fit/krasnyanskii/Tree.html" title="type parameter in Tree">T</a>&gt; - Class in <a href="nsu/fit/krasnyanskii/package-summary.html">nsu.fit.krasnyanskii</a></dt>
 <dd>
-<div class="block">Classic tree data structure</div>
+<div class="block">The tree implementing collection with DFS and BFS algorithms.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="nsu/fit/krasnyanskii/Tree.html#%3Cinit%3E()">Tree()</a></span> - Constructor for class nsu.fit.krasnyanskii.<a href="nsu/fit/krasnyanskii/Tree.html" title="class in nsu.fit.krasnyanskii">Tree</a></dt>
 <dd>
-<div class="block">Constructs a new Tree with a root node</div>
+<div class="block">Creates an empty tree.</div>
 </dd>
 <dt><a href="nsu/fit/krasnyanskii/Tree.BFS.html" title="class in nsu.fit.krasnyanskii"><span class="typeNameLink">Tree.BFS</span></a> - Class in <a href="nsu/fit/krasnyanskii/package-summary.html">nsu.fit.krasnyanskii</a></dt>
 <dd>
-<div class="block">This class implements the breadth-first search (BFS) algorithm to traverse through the tree in a level-wise manner.</div>
+<div class="block">An iterator over the elements in the tree by breadth-first search algorithm.</div>
 </dd>
 <dt><a href="nsu/fit/krasnyanskii/Tree.DFS.html" title="class in nsu.fit.krasnyanskii"><span class="typeNameLink">Tree.DFS</span></a> - Class in <a href="nsu/fit/krasnyanskii/package-summary.html">nsu.fit.krasnyanskii</a></dt>
 <dd>
-<div class="block">A depth-first search implementation of an iterator over the elements in the tree.</div>
+<div class="block">An iterator over the elements in the tree by depth-first search algorithm.</div>
 </dd>
 </dl>
 <a href="#I:A">A</a>&nbsp;<a href="#I:C">C</a>&nbsp;<a href="#I:D">D</a>&nbsp;<a href="#I:H">H</a>&nbsp;<a href="#I:I">I</a>&nbsp;<a href="#I:N">N</a>&nbsp;<a href="#I:R">R</a>&nbsp;<a href="#I:S">S</a>&nbsp;<a href="#I:T">T</a>&nbsp;<br><a href="allclasses-index.html">All&nbsp;Classes</a>&nbsp;<a href="allpackages-index.html">All&nbsp;Packages</a></div>
