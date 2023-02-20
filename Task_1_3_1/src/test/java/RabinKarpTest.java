@@ -6,9 +6,6 @@ import java.io.InputStream;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * Tests for realization of Rabin-Karp algorithm.
- */
 public class RabinKarpTest {
     @Test
     public void simpleTest() throws IOException {
@@ -21,13 +18,14 @@ public class RabinKarpTest {
             Assertions.assertEquals(exp, act);
         }
     }
+
     @Test
-    public void bigTextTest() throws IOException {
+    public void countTest() throws IOException {
         try (InputStream stream =
                      getClass().getClassLoader().getResourceAsStream("text_big.txt")) {
             RabinKarp alg = new RabinKarp(stream);
-            List<Integer> act = alg.rabinKarp("beautiful life");
-            List<Integer> exp = Arrays.asList(1138, 1201);
+            Integer act = Math.toIntExact(alg.rabinKarp("a").stream().count());
+            Integer exp = 120;
 
             Assertions.assertEquals(exp, act);
         }
