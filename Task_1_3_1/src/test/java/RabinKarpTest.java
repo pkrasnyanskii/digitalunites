@@ -27,7 +27,7 @@ public class RabinKarpTest {
                      getClass().getClassLoader().getResourceAsStream("text_big.txt")) {
             RabinKarp alg = new RabinKarp(stream);
             List<Integer> act = alg.rabinKarp("beautiful life");
-            List<Integer> exp = Arrays.asList(1138);
+            List<Integer> exp = Arrays.asList(1138, 1201);
 
             Assertions.assertEquals(exp, act);
         }
